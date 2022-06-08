@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+    artillery-tests:
+        build:
+            context: .
+            dockerfile: Dockerfile.test
+        image: artillery-tests
+        container_name: artillery-tests
+        ports: 
+            - 3006:3006
+        network_mode: "host"

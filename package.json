@@ -1,0 +1,16 @@
+{
+  "name": "artillery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@playwright/test": "^1.22.2",
+    "artillery": "^2.0.0-3",
+    "artillery-engine-playwright": "^0.0.6"
+  },
+  "scripts": {
+    "test": "$(npm bin)/artillery run ./scenarios/login.yml"
+  },
+  "author": "",
+  "license": "ISC"
+}

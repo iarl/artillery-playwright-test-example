@@ -1,0 +1,21 @@
+config:
+  target: https://www.saucedemo.com/
+  phases:
+    - duration: 10
+      arrivalRate: 1
+      name: Warm up
+    - duration: 20
+      arrivalRate: 1
+      rampTo: 5
+      name: Ramp up load
+    - duration: 30
+      arrivalRate: 1
+      name: Sustained load
+  # Enable the Playwright engine:
+  engines:
+    playwright: {}
+  processor: "../flows/login.spec.js"
+scenarios:
+  - engine: playwright
+    flowFunction: "login"
+    flow: []
